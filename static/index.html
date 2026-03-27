@@ -7,16 +7,14 @@
     <title>Інструкції</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 
     <script>
 
     function openPDF(file) {
-
-        document.getElementById("viewerFrame").src =
-            "viewer/web/viewer.html?file=../../" + file;
-
-    }
+    document.getElementById("viewerFrame").src =
+        "/static/viewer/web/viewer.html?file=/static/" + file;
+}
     function toggleMenu() {
 
         document.querySelector(".sidebar")
@@ -39,23 +37,23 @@
         <h2>Інструкції Ecoflow</h2>
 
         <button onclick="openPDF('instructions/EcoFlow_RIVER_2_Pro.pdf')">
-        EcoFlow RIVER 2 Pro
+            EcoFlow RIVER 2 Pro
         </button>
 
         <button onclick="openPDF('instructions/EcoFlow_RIVER_2_Max.pdf')">
-        EcoFlow RIVER 2 Max
+            EcoFlow RIVER 2 Max
         </button>
 
         <button onclick="openPDF('instructions/ecoflow-river-3pdf.pdf')">
-        EcoFlow River 3
+            EcoFlow River 3
         </button>
 
         <button onclick="openPDF('instructions/ecoflow-river-2___print-26430744.pdf')">
-        EcoFlow River 2
+            EcoFlow River 2
         </button>
 
         <button onclick="openPDF('instructions/ecoflow-delta-pro-ukr-68767874pdf.pdf')">
-        EcoFlow Delta Pro
+            EcoFlow Delta Pro
         </button>
 
         </div>
@@ -63,7 +61,7 @@
         <div class="content">
 
         <iframe id="viewerFrame"
-        src="viewer/web/viewer.html?file=instructions/EcoFlow_RIVER_2_Pro.pdf">
+            src="/static/viewer/web/viewer.html?file=/static/instructions/EcoFlow_RIVER_2_Pro.pdf">
         </iframe>
 
         </div>
