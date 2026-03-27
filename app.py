@@ -8,3 +8,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
+@app.route("/<path:filename>")
+def files(filename):
+    return send_from_directory('.', filename)
