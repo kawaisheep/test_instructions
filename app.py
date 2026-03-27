@@ -1,14 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, send_from_directory, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.')
 
 @app.route("/")
-def home():
+def index():
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
-    
 @app.route("/<path:filename>")
 def files(filename):
     return send_from_directory('.', filename)
